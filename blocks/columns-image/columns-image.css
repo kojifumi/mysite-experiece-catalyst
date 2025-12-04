@@ -1,10 +1,13 @@
 .columns-image > div {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
 .columns-image img {
   width: 100%;
+  border-radius: 1.25rem;
+  object-fit: cover;
 }
 
 .columns-image > div > div {
@@ -19,11 +22,25 @@
   display: block;
 }
 
+/* Button layout in columns */
+.columns-image > div > div:has(p > a.button) {
+  text-align: center;
+}
+
+.columns-image p:has(> a.button:only-child) {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.columns-image p:has(> a.button:only-child):last-of-type {
+  margin-right: 0;
+}
+
 @media (width >= 900px) {
   .columns-image > div {
     align-items: center;
     flex-direction: unset;
-    gap: 24px;
+    gap: 3rem;
   }
 
   .columns-image > div > div {

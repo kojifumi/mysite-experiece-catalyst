@@ -4,16 +4,30 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  grid-gap: 2rem;
 }
 
 .cards-feature > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  border: none;
+  background-color: var(--light-color);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cards-feature > ul > li:hover {
+  transform: translateY(-4px);
+  background-color: #f0f1ee;
 }
 
 .cards-feature .cards-feature-card-body {
-  margin: 16px;
+  margin: 0;
+}
+
+.cards-feature .cards-feature-card-body p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
 .cards-feature .cards-feature-card-image {
@@ -24,4 +38,19 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Button layout in cards-feature */
+.cards-feature > div:has(p > a.button) {
+  text-align: center;
+}
+
+.cards-feature p:has(> a.button:only-child) {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.cards-feature p:has(> a.button:only-child):last-of-type {
+  margin-right: 0;
 }

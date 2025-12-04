@@ -10,34 +10,52 @@
  * governing permissions and limitations under the License.
  */
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Syncopate:wght@400;700&display=swap');
+
 :root {
   /* colors */
   --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --light-color: #f7f8f5;
+  --dark-color: #000;
+  --text-color: #000;
+  --link-color: #000;
+  --link-hover-color: rgba(0, 0, 0, 0.6);
+
+  /* accent colors */
+  --accent-primary: #f4fe8b;
+  --accent-primary-hover: #f0fe63;
+  --accent-secondary: #cbd4ff;
+  --accent-tertiary: #f4e5fc;
 
   /* fonts */
-  --body-font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
-  --heading-font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+  --body-font-family: 'Instrument Sans', sans-serif;
+  --heading-font-family: 'Syncopate', sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-xxl: 58px;
+  --heading-font-size-xl: 45px;
+  --heading-font-size-l: 32px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 16px;
 
   /* nav height */
   --nav-height: 64px;
+
+  /* spacing */
+  --section-padding: 8rem;
+  --container-width: 1280px;
+  --gap-xl: 5rem;
+  --gap-lg: 4rem;
+  --gap-md: 3rem;
+  --gap-sm: 2rem;
+  --gap-xs: 1rem;
 }
 
 /* fallback fonts */
@@ -56,17 +74,20 @@
 @media (width >= 900px) {
   :root {
     /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
+    --body-font-size-m: 16px;
+    --body-font-size-s: 14px;
+    --body-font-size-xs: 12px;
 
     /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
+    --heading-font-size-xxl: 72px;
+    --heading-font-size-xl: 56px;
+    --heading-font-size-l: 36px;
+    --heading-font-size-m: 28px;
+    --heading-font-size-s: 22px;
     --heading-font-size-xs: 18px;
+
+    /* spacing */
+    --section-padding: 5rem;
   }
 }
 
@@ -105,10 +126,11 @@ h4,
 h5,
 h6 {
   margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.3em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
   scroll-margin: 40px;
 }
 
@@ -146,6 +168,20 @@ main > div {
   margin: 40px 16px;
 }
 
+/* Button groups - paragraphs with single buttons should display inline */
+main .section:has(p > a.button) {
+  text-align: center;
+}
+
+main p:has(> a.button:only-child) {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+main p:has(> a.button:only-child):last-of-type {
+  margin-right: 0;
+}
+
 input,
 textarea,
 select,
@@ -172,28 +208,30 @@ button {
   display: inline-block;
   max-width: 100%;
   margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  border: 2px solid var(--text-color);
+  border-radius: 100rem;
+  padding: 1em 1.5em;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: transparent;
+  color: var(--text-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--text-color);
+  color: var(--background-color);
   cursor: pointer;
 }
 
@@ -205,9 +243,22 @@ button:disabled:hover {
 
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
+  background-color: transparent;
+  border: 2px solid transparent;
   color: var(--text-color);
+}
+
+a.button.primary,
+button.primary {
+  background-color: var(--accent-primary);
+  color: var(--text-color);
+  border: 2px solid var(--accent-primary);
+}
+
+a.button.primary:hover,
+button.primary:hover {
+  background-color: var(--accent-primary-hover);
+  border-color: var(--accent-primary-hover);
 }
 
 main img {
@@ -229,11 +280,12 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
+  padding: var(--section-padding) 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: auto;
   padding: 0 24px;
 }
@@ -253,7 +305,42 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
-  padding: 40px 0;
+  padding: var(--section-padding) 0;
+}
+
+main .section.dark {
+  background-color: var(--dark-color);
+  color: white;
+  margin: 0;
+  padding: var(--section-padding) 0;
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6,
+main .section.dark p {
+  color: white;
+}
+
+main .section.accent-primary {
+  background-color: var(--accent-primary);
+  margin: 0;
+  padding: var(--section-padding) 0;
+}
+
+main .section.accent-secondary {
+  background-color: var(--accent-secondary);
+  margin: 0;
+  padding: var(--section-padding) 0;
+}
+
+main .section.accent-tertiary {
+  background-color: var(--accent-tertiary);
+  margin: 0;
+  padding: var(--section-padding) 0;
 }
 
 /* KIOXIA Custom Section Styles */

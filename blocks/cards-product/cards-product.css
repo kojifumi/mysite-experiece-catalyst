@@ -4,57 +4,103 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  gap: 2rem;
 }
 
 .cards-product > ul > li {
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .cards-product > ul > li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
 }
 
 .cards-product .cards-product-card-image {
   line-height: 0;
-  background: #fafafa;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 180px;
-  padding: 20px;
+  min-height: 200px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 1.25rem 1.25rem 0 0;
 }
 
 .cards-product .cards-product-card-image img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  max-height: 160px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
 .cards-product .cards-product-card-body {
-  padding: 20px;
+  padding: 1.5rem;
 }
 
-.cards-product .cards-product-card-body strong {
-  font-size: 1.15rem;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 10px;
-  color: #333;
+/* Meta section (badge + read time) */
+.cards-product-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cards-product-badge {
+  display: inline-block;
+  padding: 2px 9px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 100rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 1);
+}
+
+.cards-product-read-time {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Heading */
+.cards-product .cards-product-card-body h3 {
+  font-size: 1.27rem;
+  font-weight: 400;
   line-height: 1.3;
+  margin: 0 0 1rem;
+  text-transform: none;
+  letter-spacing: -0.01em;
 }
 
-.cards-product .cards-product-card-body p {
-  font-size: 0.9rem;
+/* Description */
+.cards-product-description {
+  font-size: 0.95rem;
   line-height: 1.6;
-  color: #666;
-  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 0 1rem;
+}
+
+/* Read link */
+.cards-product-read-link {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--text-color);
+  transition: opacity 0.3s;
+}
+
+.cards-product-read-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
 }
 
 @media (width >= 768px) {
