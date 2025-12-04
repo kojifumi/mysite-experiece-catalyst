@@ -72,6 +72,21 @@ function buildAutoBlocks(main) {
 }
 
 /**
+ * Moves instrumentation attributes from a given element to another.
+ * @param {Element} from The element to copy attributes from
+ * @param {Element} to The element to copy attributes to
+ */
+export function moveInstrumentation(from, to) {
+  if (!from || !to) return;
+
+  [...from.attributes].forEach((attr) => {
+    if (attr.name.startsWith('data-')) {
+      to.setAttribute(attr.name, attr.value);
+    }
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */

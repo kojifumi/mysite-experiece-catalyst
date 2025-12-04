@@ -31,8 +31,8 @@
     ]
   },
   "usage": {
-    "pagesUsing": ["content/ja-jp/top"],
-    "reuseCount": 1,
-    "lastUsed": "2025-12-04T05:47:15.939Z"
+    "pagesUsing": ["content/ja-jp/top", "content/index"],
+    "reuseCount": 2,
+    "lastUsed": "2025-12-04T08:25:33.827Z"
   }
 }

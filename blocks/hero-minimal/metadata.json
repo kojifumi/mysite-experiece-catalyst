@@ -1,0 +1,40 @@
+{
+  "variantName": "hero-minimal",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2025-12-04T08:25:33.827Z",
+  "sourceContext": {
+    "originUrl": "https://wknd-trendsetters.site",
+    "originPage": "fashion blog homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "blog-hero",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph + 2 CTAs",
+    "buttonCount": 2,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog post pages",
+      "article landing pages",
+      "text-heavy content pages",
+      "minimal hero sections without images"
+    ],
+    "notSuitableFor": [
+      "product pages with hero images",
+      "landing pages with background images",
+      "carousel hero sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2025-12-04T08:25:33.827Z"
+  }
+}
