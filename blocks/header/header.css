@@ -1,9 +1,11 @@
-/* header and nav layout */
+/* header and nav layout - KIOXIA style */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: white;
   width: 100%;
   z-index: 2;
   position: fixed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e6e6e6;
 }
 
 header nav {
@@ -145,8 +147,12 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+  width: 120px;
+  height: 32px;
+}
+
+header nav .nav-brand a {
+  text-decoration: none;
 }
 
 /* sections */
@@ -171,6 +177,16 @@ header nav .nav-sections ul {
 
 header nav .nav-sections ul > li {
   font-weight: 500;
+}
+
+header nav .nav-sections ul > li > a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+header nav .nav-sections ul > li > a:hover {
+  color: #0066cc;
 }
 
 header nav .nav-sections ul > li > ul {
