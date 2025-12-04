@@ -1,0 +1,42 @@
+{
+  "variantName": "hero-article",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2025-12-04T06:19:02.516Z",
+  "sourceContext": {
+    "originUrl": "https://www.kioxia.com/ja-jp/insights/memory-ai-202511.html",
+    "originPage": "article page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "article-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + large responsive image",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "article pages",
+      "blog posts",
+      "content pages with hero images",
+      "editorial content"
+    ],
+    "notSuitableFor": [
+      "rotating carousels",
+      "multiple image banners",
+      "interactive hero sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "content/ja-jp/insights/memory-ai-202511"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2025-12-04T06:19:02.516Z"
+  }
+}

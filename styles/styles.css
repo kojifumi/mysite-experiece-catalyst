@@ -20,8 +20,8 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+  --heading-font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -257,16 +257,17 @@ main .section.highlight {
 }
 
 /* KIOXIA Custom Section Styles */
+main .section.grey,
 main .section.business-grey {
   background-color: #f5f5f5;
   margin: 0;
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 main .section.personal-cyan {
-  background: linear-gradient(135deg, #00bcd4 0%, #00a0c6 100%);
+  background: linear-gradient(135deg, #00bcd4 0%, #0097b8 100%);
   margin: 0;
-  padding: 80px 0;
+  padding: 60px 0;
   color: white;
 }
 
@@ -279,11 +280,21 @@ main .section.personal-cyan strong {
 main .section.personal-cyan a {
   color: white;
   border-color: white;
+  background: transparent;
 }
 
 main .section.personal-cyan a:hover {
-  background: white;
-  color: #00bcd4;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: white;
+}
+
+@media (width >= 768px) {
+  main .section.grey,
+  main .section.business-grey,
+  main .section.personal-cyan {
+    padding: 80px 0;
+  }
 }
 
 /* General section styling */
@@ -291,15 +302,77 @@ main > .section {
   padding: 60px 24px;
 }
 
-main h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 0 24px;
-  text-align: center;
-}
-
 main > .section > div {
   max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* KIOXIA Insights Article Styling */
+main h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.75;
+  margin: 0 0 24px;
+  color: #000;
+}
+
+main p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin: 0 0 24px;
+  color: #000;
+}
+
+main h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.75;
+  margin: 48px 0 24px;
+  text-align: left;
+  color: #000;
+}
+
+/* Tag links styling */
+main ul:has(a[href*="sumtag"]) {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+main ul:has(a[href*="sumtag"]) li {
+  margin: 0;
+}
+
+main a[href*="sumtag"] {
+  display: inline-block;
+  background-color: #e6e6e6;
+  color: #000;
+  padding: 4px 20px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+main a[href*="sumtag"]:hover {
+  background-color: #d0d0d0;
+}
+
+/* Image caption styling */
+main em {
+  font-style: italic;
+  font-size: 14px;
+  color: #666;
+  display: block;
+  margin-top: 8px;
+}
+
+/* Content max-width */
+main > .section > div {
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -307,22 +380,22 @@ main > .section > div {
   main > .section {
     padding: 80px 48px;
   }
-  
-  main h2 {
-    font-size: 2.5rem;
-  }
 }
 
 /* News Section Styling */
 main h2 + ul {
   list-style: none;
   padding: 0;
-  margin: 24px 0;
+  margin: 32px 0;
 }
 
 main h2 + ul > li {
-  padding: 20px 0;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 18px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+main h2 + ul > li:first-child {
+  padding-top: 0;
 }
 
 main h2 + ul > li:last-child {
@@ -330,23 +403,26 @@ main h2 + ul > li:last-child {
 }
 
 main h2 + ul > li a {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 500;
   color: #333;
   text-decoration: none;
   transition: color 0.3s;
+  line-height: 1.5;
 }
 
 main h2 + ul > li a:hover {
   color: #0066cc;
+  text-decoration: underline;
 }
 
 main h2 + ul > li ul {
   list-style: none;
-  padding: 8px 0 0;
+  padding: 10px 0 0;
   margin: 0;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.4;
 }
 
 main h2 + ul > li ul li {
@@ -357,7 +433,7 @@ main h2 + ul > li ul li {
 
 main h2 + ul > li ul li::after {
   content: " | ";
-  padding: 0 8px;
+  padding: 0 6px;
 }
 
 main h2 + ul > li ul li:last-child::after {
@@ -365,20 +441,127 @@ main h2 + ul > li ul li:last-child::after {
 }
 
 /* Button styling for news list link */
+main h2 + ul + p {
+  text-align: center;
+  margin-top: 24px;
+}
+
 main h2 + ul + p a {
   display: inline-block;
-  padding: 12px 32px;
+  padding: 10px 28px;
   background: white;
   border: 2px solid #0066cc;
   border-radius: 4px;
   color: #0066cc;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.95rem;
   transition: all 0.3s;
-  margin-top: 16px;
 }
 
 main h2 + ul + p a:hover {
   background: #0066cc;
   color: white;
+}
+
+/* SNS Share Section Styling */
+main h2:has(+ ul a img[src*="/icons/"]) {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 48px 0 16px;
+}
+
+main h2 + ul:has(a img[src*="/icons/"]) {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 32px;
+  display: flex;
+  gap: 12px;
+}
+
+main h2 + ul:has(a img[src*="/icons/"]) li {
+  margin: 0;
+}
+
+main h2 + ul:has(a img[src*="/icons/"]) a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  transition: opacity 0.3s;
+}
+
+main h2 + ul:has(a img[src*="/icons/"]) a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+main h2 + ul:has(a img[src*="/icons/"]) img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Back to list button styling */
+main p:has(> a[href*="/ja-jp/insights.html"]:only-child) {
+  text-align: center;
+  margin: 48px 0 32px;
+}
+
+main a[href*="/ja-jp/insights.html"]:not([href*="sumtag"]) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  background: white;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+main a[href*="/ja-jp/insights.html"]:not([href*="sumtag"]):hover {
+  background: #f5f5f5;
+  text-decoration: none;
+}
+
+/* Related Links Section Styling */
+main h2:last-of-type {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 48px 0 24px;
+}
+
+main h2:last-of-type + ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 48px;
+}
+
+main h2:last-of-type + ul li {
+  margin: 0 0 16px;
+  padding: 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+main h2:last-of-type + ul li:last-child {
+  border-bottom: none;
+}
+
+main h2:last-of-type + ul a {
+  display: block;
+  padding: 16px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: color 0.3s;
+}
+
+main h2:last-of-type + ul a:hover {
+  color: #0066cc;
+  text-decoration: underline;
 }

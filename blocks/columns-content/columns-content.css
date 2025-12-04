@@ -58,34 +58,35 @@
 .columns-content .columns-content-overlay {
   position: absolute;
   top: 50%;
-  right: 48px;
+  right: 32px;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.97);
-  padding: 32px 48px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 24px 40px;
   border-radius: 0;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
 .columns-content .columns-content-overlay h2,
 .columns-content .columns-content-overlay strong {
   margin: 0;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #333;
   text-align: center;
   display: block;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
 @media (width <= 768px) {
   .columns-content .columns-content-overlay {
     right: 16px;
-    padding: 20px 32px;
+    padding: 16px 28px;
   }
 
   .columns-content .columns-content-overlay h2,
   .columns-content .columns-content-overlay strong {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
