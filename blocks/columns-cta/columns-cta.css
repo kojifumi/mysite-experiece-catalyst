@@ -1,0 +1,32 @@
+.columns-cta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  text-align: center;
+}
+
+.columns-cta h2 {
+  font-size: var(--heading-font-size-xl);
+  margin: 0;
+}
+
+.columns-cta a {
+  margin: 8px 0;
+}
+
+@media (width >= 900px) {
+  .columns-cta > div {
+    flex-direction: row;
+    text-align: left;
+    gap: 48px;
+  }
+
+  .columns-cta > div > div {
+    flex: 1;
+  }
+
+  .columns-cta > div > div:first-child {
+    flex: 2;
+  }
+}

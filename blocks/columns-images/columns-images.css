@@ -1,0 +1,19 @@
+.columns-images > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.columns-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (width >= 768px) {
+  .columns-images > div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
