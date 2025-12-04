@@ -1,0 +1,57 @@
+.hero-carousel-container .hero-carousel-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 400px;
+  background: #e91e8c;
+}
+
+.hero-carousel > div {
+  display: none;
+}
+
+.hero-carousel > div:first-child {
+  display: block;
+}
+
+.hero-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 400px;
+}
+
+.hero-carousel p {
+  display: none;
+}
+
+.hero-carousel a {
+  display: block;
+  text-decoration: none;
+}
+
+@media (width >= 768px) {
+  .hero-carousel {
+    min-height: 500px;
+  }
+
+  .hero-carousel img {
+    min-height: 500px;
+  }
+}
+
+@media (width >= 1200px) {
+  .hero-carousel {
+    min-height: 600px;
+  }
+
+  .hero-carousel img {
+    min-height: 600px;
+  }
+}

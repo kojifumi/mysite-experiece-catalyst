@@ -255,3 +255,130 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* KIOXIA Custom Section Styles */
+main .section.business-grey {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 80px 0;
+}
+
+main .section.personal-cyan {
+  background: linear-gradient(135deg, #00bcd4 0%, #00a0c6 100%);
+  margin: 0;
+  padding: 80px 0;
+  color: white;
+}
+
+main .section.personal-cyan h2,
+main .section.personal-cyan p,
+main .section.personal-cyan strong {
+  color: white;
+}
+
+main .section.personal-cyan a {
+  color: white;
+  border-color: white;
+}
+
+main .section.personal-cyan a:hover {
+  background: white;
+  color: #00bcd4;
+}
+
+/* General section styling */
+main > .section {
+  padding: 60px 24px;
+}
+
+main h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+main > .section > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (width >= 768px) {
+  main > .section {
+    padding: 80px 48px;
+  }
+  
+  main h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* News Section Styling */
+main h2 + ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+main h2 + ul > li {
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+main h2 + ul > li:last-child {
+  border-bottom: none;
+}
+
+main h2 + ul > li a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+main h2 + ul > li a:hover {
+  color: #0066cc;
+}
+
+main h2 + ul > li ul {
+  list-style: none;
+  padding: 8px 0 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+main h2 + ul > li ul li {
+  display: inline;
+  padding: 0;
+  border: none;
+}
+
+main h2 + ul > li ul li::after {
+  content: " | ";
+  padding: 0 8px;
+}
+
+main h2 + ul > li ul li:last-child::after {
+  content: "";
+}
+
+/* Button styling for news list link */
+main h2 + ul + p a {
+  display: inline-block;
+  padding: 12px 32px;
+  background: white;
+  border: 2px solid #0066cc;
+  border-radius: 4px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  margin-top: 16px;
+}
+
+main h2 + ul + p a:hover {
+  background: #0066cc;
+  color: white;
+}

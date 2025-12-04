@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2025-12-04T05:47:15.939Z",
+  "sourceContext": {
+    "originUrl": "https://www.kioxia.com/ja-jp/top.html",
+    "originPage": "KIOXIA homepage product sections",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-grid",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "grid of items with image + text",
+    "buttonCount": 0,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product category pages",
+      "feature showcases",
+      "service offerings"
+    ],
+    "notSuitableFor": [
+      "text-only cards",
+      "testimonials with quotes"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/ja-jp/top"],
+    "reuseCount": 1,
+    "lastUsed": "2025-12-04T05:47:15.939Z"
+  }
+}

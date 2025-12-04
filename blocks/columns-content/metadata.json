@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-content",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2025-12-04T05:47:38.181Z",
+  "sourceContext": {
+    "originUrl": "https://www.kioxia.com/ja-jp/top.html",
+    "originPage": "KIOXIA homepage content sections",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "content-layout",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "text + image side-by-side",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "content sections with images",
+      "feature descriptions",
+      "informational layouts"
+    ],
+    "notSuitableFor": [
+      "text-only content",
+      "grid layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/ja-jp/top"],
+    "reuseCount": 1,
+    "lastUsed": "2025-12-04T05:47:38.181Z"
+  }
+}

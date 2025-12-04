@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-carousel",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2025-12-04T05:46:48.240Z",
+  "sourceContext": {
+    "originUrl": "https://www.kioxia.com/ja-jp/top.html",
+    "originPage": "KIOXIA homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "wide",
+    "purpose": "carousel-banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "rotating images with links",
+    "buttonCount": 0,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero carousels",
+      "rotating promotional banners",
+      "featured content sliders"
+    ],
+    "notSuitableFor": [
+      "static hero sections",
+      "single image banners"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/ja-jp/top"],
+    "reuseCount": 1,
+    "lastUsed": "2025-12-04T05:46:48.240Z"
+  }
+}
